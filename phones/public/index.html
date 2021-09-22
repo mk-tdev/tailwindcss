@@ -8,78 +8,154 @@
   <title>Phones</title>
   <link rel="stylesheet" href="styles.css">
 
+
 </head>
 
 <!-- https://tailwindcss.com/docs/customizing-colors#default-color-palette -->
+<!-- https://heroicons.com/ -->
 
-<body class=" text-gray-600">
-  <div>
-    <div>
-      <nav>
-        <div>
-          <h1 class="font-bold uppercase p-4 border-gray-200 border"><a href="/">Mobile Phones</a></h1>
+<body class=" text-gray-600 font-nunito select-none">
+  <div class="grid md:grid-cols-4">
+    <div class="md:col-span-1 md:flex md:justify-end">
+      <nav class="text-right">
+        <div class="flex justify-between items-center">
+          <h1 class=" uppercase p-4  border-gray-200 border-b"><a href="/" class="hover:text-gray-800">Mobile
+              Phones</a>
+          </h1>
+
+          <div class="px-4 cursor-pointer md:hidden select-none" id="menu-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+            </svg>
+          </div>
         </div>
 
-        <ul>
-          <li class="text-gray-900 font-bold">
-            <a href="#">
+        <ul
+          class="hidden md:block text-sm mt-6 transition-all ease-out duration-300 transform hover:scale-125 hover:bg-opacity-60"
+          id="menu">
+          <li class="font-bold py-2">
+            <a href="#" class="flex justify-end gap-2 border-r-4 pr-2 border-primary">
               <span>Home</span>
+              <svg class="w-5" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+              </svg>
             </a>
           </li>
-          <li>
-            <a href="#">
+          <li class="font-bold py-2">
+            <a href="#" class="flex justify-end gap-2 border-r-4 pr-2  border-white">
               <span>About </span>
+              <svg class="w-5" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
             </a>
           </li>
-          <li>
-            <a href="#">
+          <li class="font-bold py-2">
+            <a href="#" class="flex justify-end gap-2 border-r-4 pr-2 border-white">
               <span>Contact</span>
+              <svg class="w-5" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M3 19v-8.93a2 2 0 01.89-1.664l7-4.666a2 2 0 012.22 0l7 4.666A2 2 0 0121 10.07V19M3 19a2 2 0 002 2h14a2 2 0 002-2M3 19l6.75-4.5M21 19l-6.75-4.5M3 10l6.75 4.5M21 10l-6.75 4.5m0 0l-1.14.76a2 2 0 01-2.22 0l-1.14-.76" />
+              </svg>
             </a>
           </li>
         </ul>
       </nav>
     </div>
 
-    <main class="px-16 py-6">
-      <div>
-        <a href="#">Login</a>
-        <a href="#">Sign up</a>
+    <main class="px-8 py-6 bg-gray-100 md:col-span-3">
+      <div class="flex justify-center md:justify-end gap-2 ">
+        <a href="#"
+          class="text-primary btn border-primary md:border-2 hover:bg-primary hover:text-white transition-all ease-out duration-300">Login</a>
+        <a href="#"
+          class="text-primary btn border-primary md:border-2 hover:bg-primary hover:text-white transition-all ease-out duration-300">Sign
+          up</a>
       </div>
 
       <header>
-        <h2 class="text-gray-900 text-4xl font-semibold">Phones</h2>
+        <h2 class="text-gray-900 text-5xl font-semibold">Phones</h2>
         <h3 class="text-2xl">For techies</h3>
       </header>
 
       <div>
-        <h4 class="font-bold mt-12 pb-2 border border-gray-200">Latest Phones</h4>
+        <h4 class="font-bold mt-12 pb-1 border-b-2 border-gray-200">Latest Phones</h4>
 
-        <div>
-          <!-- Card -->
+        <div class="mt-5 grid lg:grid-cols-3 md:grid-cols-3 gap-5 ">
 
-          <div class="">
-            <img src="imgs/iPhone13Pro.jpeg" alt="about">
-            <div>
-              <span>iPhone 13 Pro</span>
-              <span>Phone by Apple</span>
+          <div class="card hover:shadow-lg">
+            <img src="imgs/iPhone13Pro.jpeg" alt="about" class="w-full h-40 sm:h-48 object-cover">
+            <div class="m-5">
+              <span class="font-bold">iPhone 13 Pro</span>
+              <span class="block text-gray-500 text-sm">Phone by Apple</span>
+            </div>
+            <div class="badge ">
+              <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20"
+                fill="currentColor">
+                <path fill-rule="evenodd"
+                  d="M7 2a2 2 0 00-2 2v12a2 2 0 002 2h6a2 2 0 002-2V4a2 2 0 00-2-2H7zm3 14a1 1 0 100-2 1 1 0 000 2z"
+                  clip-rule="evenodd" />
+              </svg>
+              <span>$ 1600</span>
             </div>
           </div>
+
+          <div class="card hover:shadow-lg">
+            <img src="imgs/iPhone12Pro.png" alt="about" class="w-full h-40 sm:h-48 object-cover">
+            <div class="m-5">
+              <span class="font-bold">iPhone 12 Pro</span>
+              <span class="block text-gray-500 text-sm">Phone by Apple</span>
+            </div>
+            <div class="badge">
+              <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20"
+                fill="currentColor">
+                <path fill-rule="evenodd"
+                  d="M7 2a2 2 0 00-2 2v12a2 2 0 002 2h6a2 2 0 002-2V4a2 2 0 00-2-2H7zm3 14a1 1 0 100-2 1 1 0 000 2z"
+                  clip-rule="evenodd" />
+              </svg>
+              <span>$ 1600</span>
+            </div>
+          </div>
+
+          <div class="card hover:shadow-lg">
+            <img src="imgs/iPhone13.jpeg" alt="about" class="w-full h-40 sm:h-48 object-cover">
+            <div class="m-5">
+              <span class="font-bold">iPhone 13</span>
+              <span class="block text-gray-500 text-sm">Phone by Apple</span>
+            </div>
+            <div class="badge">
+              <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20"
+                fill="currentColor">
+                <path fill-rule="evenodd"
+                  d="M7 2a2 2 0 00-2 2v12a2 2 0 002 2h6a2 2 0 002-2V4a2 2 0 00-2-2H7zm3 14a1 1 0 100-2 1 1 0 000 2z"
+                  clip-rule="evenodd" />
+              </svg>
+              <span>$ 1400</span>
+            </div>
+          </div>
+
         </div>
 
-        <h4 class="font-bold mt-12 pb-2 border border-gray-200">Most Popular</h4>
+        <h4 class="font-bold mt-12 pb-2 border-b-2 border-gray-200 ">Most Popular</h4>
 
         <div>
           <!-- Cards go here -->
         </div>
 
-        <div>
-          <div>
+        <div class="flex justify-center mt-3">
+          <div
+            class="text-secondary-500 btn hover:shadow-inner transition-all ease-out duration-300 transform hover:scale-125 hover:bg-opacity-60">
             Load more!
           </div>
         </div>
       </div>
     </main>
   </div>
+  <script src="app.js"></script>
 </body>
 
 </html>
